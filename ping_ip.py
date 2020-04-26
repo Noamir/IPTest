@@ -14,7 +14,7 @@ def ping_ip_address(ip_address):
     # Building the command. Ex: "ping -c 1 google.com"
     command = ['ping', param, '1', ip_address]
    
-    return subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE) # returns True if ip is reachable, False if unreachable
+    return subprocess.call(command) == 0 # returns True if ip is reachable, False if unreachable
 
 ## Option 2
 

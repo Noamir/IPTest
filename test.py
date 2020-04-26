@@ -69,7 +69,6 @@ for ip in ips_list:
 # wait until worker threads are done to exit    
 ips_q.join()
 
-
 print('FINISHED')
 
 # print result
